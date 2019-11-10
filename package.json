@@ -1,6 +1,6 @@
 {
   "name": "fpmn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Package manager for Flutter",
   "main": "bin/index.js",
   "scripts": {
