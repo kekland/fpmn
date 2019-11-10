@@ -28,7 +28,6 @@ const cli = async () => {
   const args = arg({})
 
   const cwd = process.cwd()
-  console.log(cwd)
 
   const pubspecLocation = path.join(cwd, 'pubspec.yaml')
 
