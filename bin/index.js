@@ -1,8 +1,11 @@
 const arg = require('arg')
 const fs = require('fs')
 const path = require('path')
+const ora = require('ora')
 const chalk = require('chalk').default
+const execa = require('execa')
 
+const utils = require('../lib/utils')
 const pubspecUtils = require('../lib/pubspec-utils')
 const install = require('../lib/install')
 const uninstall = require('../lib/install')
@@ -39,6 +42,16 @@ const cli = async () => {
 
   if (pubspec) {
     pubspecUtils.writePubspec(pubspecLocation, pubspec)
+
+    const updateOra = ora(`Running ${utils.green('flutter pub get')}`)
+    try {
+      await execa('flutter pub get')
+      updateOra.succeed()
+    }
+    catch (e) {
+      console.error(chalk.red(e))
+      updateOra.fail()
+    }
   }
 }
 
