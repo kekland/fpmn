@@ -1,11 +1,15 @@
 {
   "name": "fpmn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Package manager for Flutter",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/index.js"
+  },
+  "bin": {
+    "fpmn": "bin/index.js",
+    "fpm": "bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +38,10 @@
     "ora": "^4.0.2",
     "prompts": "^2.2.1"
   },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
   "devDependencies": {
     "@types/execa": "^2.0.0",
     "@types/js-yaml": "^3.12.1"
