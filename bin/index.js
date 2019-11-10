@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const arg = require('arg')
 const fs = require('fs')
 const path = require('path')
